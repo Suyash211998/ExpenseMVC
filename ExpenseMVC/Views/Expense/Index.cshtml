@@ -1,0 +1,36 @@
+﻿@model List<ExpenseMVC.Models.Domains.Expense>
+
+@{
+    int count = 0;
+}
+<h1>Expenses</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Item Id</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Expense Date</th>
+      <th scope="col">Category</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+        @foreach (var expense in Model)
+        {
+            <tr>
+
+                <td>@{
+                        count = count + 1;
+                    } @count</td>
+                
+          <td>@expense.ItemName</td>
+          <td>@expense.Amount</td>
+          <td>@expense.ExpenseDate.Date</td>
+          <td>@expense.Category</td>
+          <td><a href="Expense/View/@expense.Id">View</a></td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,28 @@
+﻿@model ExpenseMVC.Models.AddExpenseViewModel
+
+@{
+}
+<h1>Add Expense</h1>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Item Name</label>
+        <input type="text" class="form-control" asp-for="ItemName">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Amount</label>
+        <input type="number" class="form-control" asp-for="Amount">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Expense Date</label>
+        <input type="date" class="form-control" asp-for="ExpenseDate">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Category</label>
+        <input type="text" class="form-control" asp-for="Category">
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
